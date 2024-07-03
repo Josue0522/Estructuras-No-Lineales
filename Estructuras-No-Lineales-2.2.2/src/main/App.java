@@ -41,6 +41,10 @@ public class App {
         graph.addEdge(node2, node4);
         graph.addEdge(node4, node5);
 
+        graph.getDFS(node5);
+        graph.getBFS(node3);
+        graph.getAdjacencyMatrix();
+        graph.printAdjacencyMatrix();
         //Imprime el grafo
         graph.printGraph();
     }
