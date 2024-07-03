@@ -64,7 +64,22 @@ public class SetsClase {
     }
 
     public void construirTreeSetConComparador(){
-
+        //Comparador personalizado que ordena las cadenas en orden inverso (de Z hasta la A)
+        Comparator<String> comparadorOrdenInverso = new Comparator<String>() {
+            @Override
+            public int compare (String s1, String s2){
+                return s2.compareTo(s1);
+            }
+        };
+        TreeSet<String> conjunto = new TreeSet<>(comparadorOrdenInverso);
+        //Agregar elementos
+        conjunto.add("Manzana");
+        conjunto.add("Banana");
+        conjunto.add("Naranja");
+        conjunto.add("Manzana");
+        conjunto.add("Uvas");
+        conjunto.add("Piña");
+        System.out.println("TreeSet con Comparador: "+conjunto);
     }
 
 }
